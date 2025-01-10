@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكتب - مكتبة الكتب</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myfunctions.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>الكتب</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="AboutUs.html">من نحن</a>
+            <a href="books.html">الكتب</a>
+        </nav>
+    </header>
+    <main>
+        <h2>قائمة الكتب</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>رمز الكتاب</th>
+                    <th>العنوان</th>
+                    <th>السعر (ل.س)</th>
+                    <th>إظهار التفاصيل</th>
+                    <th>اختيار</th>
+                </tr>
+            </thead>
+            <tbody id="booksTable">
+                <!-- الكتب ستُضاف ديناميكيًا عبر JavaScript -->
+            </tbody>
+        </table>
+        <button onclick="proceedToForm()">متابعة</button>
+
+        <!-- النموذج -->
+        <form id="orderForm" style="display: none; margin-top: 20px;" onsubmit="validateAndSubmitForm(event)">
+            <h3>نموذج طلب الكتاب</h3>
+            <label for="fullName">الاسم الكامل:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الكامل" title="أحرف عربية فقط">
+            <br>
+            <label for="nationalId">الرقم الوطني:</label>
+            <input type="text" id="nationalId" name="nationalId" placeholder="الرقم الوطني" title="11 خانة تبدأ بكود المحافظة (01-14)" required>
+            <br>
+            <label for="birthDate">تاريخ الميلاد:</label>
+            <input type="text" id="birthDate" name="birthDate" placeholder="dd-mm-yyyy" title="التاريخ بالشكل dd-mm-yyyy">
+            <br>
+            <label for="mobile">رقم الموبايل:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="09XXXXXXXX" title="رقم موبايل صحيح يبدأ بـ 09">
+            <br>
+            <label for="email">الإيميل:</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com">
+            <br>
+            <button type="submit">إرسال</button>
+        </form>
+    </main>
+    <footer>
+        <p>جميع الحقوق محفوظة © 2025 مكتبة الكتب</p>
+    </footer>
+</body>
+</html>
